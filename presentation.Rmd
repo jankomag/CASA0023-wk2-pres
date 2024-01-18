@@ -1,0 +1,28 @@
+---
+title: "Presentation on a sesnor"
+subtitle: "for CASA0023 week 2"
+author: "Jan Magnuszewski"
+institute: "UCL 2024"
+date: "2016/12/12 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+class: inverse, center, middle
+
+# Landsat 9
+
+---
+
+# Content Here
+
+---
+# Hello World
+--
+
+Some text
+---
