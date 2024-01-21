@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Presentation on a sesnor</title>
+    <title>Presentation on Landsat 9</title>
     <meta charset="utf-8" />
     <meta name="author" content="Jan Magnuszewski" />
+    <meta name="date" content="2024-01-21" />
     <script src="libs/header-attrs-2.25/header-attrs.js"></script>
     <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/default-fonts.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/middlebury.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
 .title[
-# Presentation on a sesnor
+# Presentation on Landsat 9
 ]
 .subtitle[
-## for CASA0023 week 2
+## CASA0023 - week 2
 ]
 .author[
 ### Jan Magnuszewski
@@ -25,25 +27,71 @@ class: center, middle, inverse, title-slide
 ### UCL 2024
 ]
 .date[
-### 2016/12/12 (updated: 2024-01-18)
+### 2024-01-21
 ]
 
 ---
 
-class: inverse, center, middle
-
 # Landsat 9
+## The newest Landsat satellite
+- Launched September 27th, 2021 by NASA
+- The collected data is publicly available through USGS
+- Replaces Landsat 7 (launched in 1999), taking its place in orbit
+- Together with Landsat 8 the revisit time for data collection is 8 days
+- Landsat 9 addresses the stray light issue seen in Landsat 8's TIRS.
+
 
 ---
+background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
+---
+# The history of Landsat Satellites
 
-# Content Here
+![](res/Landsat_timeline_20200318_title.gif)
+Figure adapted from [@landsat9].
 
 ---
-# Hello World
---
+# Technical Details
+ Landsat 9 carries two sensors: Operational Land Imager 2 (OLI-2) and the Thermal Infrared Sensor 2 (TIRS-2), which detect 11 wavelengths of visible, near infrared, shortwave infrared, and thermal infrared light. Both, with a five-year design life.
 
-Some text
+.pull-left[
+###OLI-2
+![](res/OLI-2-300x280.png)
+A diagram of OLI-2 showing its main components. Image credit: NASA
+]
+
+.pull-right[##TIRS-2
+![](res/TIRS-2-274x300.png)
+A diagram of TIRS-2 showing its main components. Image credit: NASA
+]
+
 ---
+# OLI-2
+Built by Ball Aerospace &amp; Technologies Corporation.
+
+- 30 m per pixel resolution
+- Improvements to the sensor mean that dark regions like forests and coastal areas can be better captured.
+- OLI-2 has a 15-degree field-of-view covering a 185 km (115 mi) across-track ground swath.
+
+### New bands added to Landsat 9:
+- Coastal/Aerosol Band (Band 1): Measures chlorophyll concentrations in coastal regions and aids in aerosol detection.
+- Cirrus Band (Band 9): Detects high, thin cirrus clouds.
+- Two Thermal Infrared Bands (Bands 10 &amp; 11): Image data for two distinct thermal infrared spectral regions.
+---
+
+# TIRS-2
+- 30 m per pixel resolution
+- TIRS-2 uses thermal bands to detect subtle shifts in temperature—within a tenth of a degree Celsius.
+- Detects thermal radiation in two thermal wavelengths and corrects atmospheric effects.
+- TIRS-2 has a 15-degree field-of-view, matching the 185 km across-track swath of OLI-2.
+]
+---
+# Bands
+Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands. Two new bands were added to Landsat 9 to measure high, thin clouds and water quality.
+![](res/all_Landsat_bands.png)
+Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
+
+---
+# References
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
