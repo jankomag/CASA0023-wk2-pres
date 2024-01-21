@@ -8,7 +8,7 @@ output:
   xaringan::moon_reader:
     lib_dir: libs
     yolo: true
-    css: [default, middlebury, metropolis-fonts]
+    css: [default, shinobi, metropolis-fonts]
     nature:
       highlightStyle: github
       highlightLines: true
