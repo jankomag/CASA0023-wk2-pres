@@ -4,11 +4,11 @@
     <title>Presentation on Landsat 9</title>
     <meta charset="utf-8" />
     <meta name="author" content="Jan Magnuszewski" />
-    <meta name="date" content="2024-01-21" />
-    <script src="libs/header-attrs-2.25/header-attrs.js"></script>
-    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/shinobi.css" rel="stylesheet" />
-    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <meta name="date" content="2024-03-20" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/shinobi.css" rel="stylesheet" />
+    <link href="libs/remark-css/metropolis-fonts.css" rel="stylesheet" />
   </head>
   <body>
     <textarea id="source">
@@ -27,25 +27,40 @@ class: center, middle, inverse, title-slide
 ### UCL 2024
 ]
 .date[
-### 2024-01-21
+### 2024-03-20
 ]
 
 ---
 
+
+
 # Landsat 9
+
 ## The newest Landsat satellite
+
 - Launched September 27th, 2021 by NASA
 - The collected data is publicly available through USGS
 - Replaces Landsat 7 (launched in 1999), taking its place in orbit
-- Together with Landsat 8 the revisit time for data collection is 8 days
 - Landsat 9 addresses the stray light issue seen in Landsat 8's TIRS.
+- Together with Landsat 8 the revisit time for data collection is 8 days
 
+&lt;img src="res/LANDSAT9.jpeg" width="70%" style="display: block; margin: auto;" /&gt;
+
+.link-style1[[NASA/Goddard Space Flight Center/Conceptual Image Lab](https://svs.gsfc.nasa.gov/vis/a010000/a013200/a013259/Landsat9_still_SW2.jpg)]
 
 ---
 # The history of Landsat Satellites
 
-![](res/Landsat_timeline_20200318_title.gif)
-Figure adapted from [@landsat9].
+&lt;img src="res/Landsat_timeline_20200318_title.gif" width="98%" style="display: block; margin: auto;" /&gt;
+
+
+&lt;a name=cite-landsat9&gt;&lt;/a&gt;[NASA Landsat Program (2024)](#bib-landsat9) 
+---
+# Bands
+Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands. Two new bands were added to Landsat 9 to measure high, thin clouds and water quality.
+![](res/all_Landsat_bands.png)
+Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
+
 
 ---
 # Technical Details
@@ -63,8 +78,9 @@ A diagram of TIRS-2 showing its main components. Image credit: NASA
 ]
 
 ---
+class: left, middle
 # OLI-2
-Built by Ball Aerospace &amp; Technologies Corporation.
+### Built by Ball Aerospace &amp; Technologies Corporation
 
 - 30 m per pixel resolution
 - Improvements to the sensor mean that dark regions like forests and coastal areas can be better captured.
@@ -77,21 +93,37 @@ Built by Ball Aerospace &amp; Technologies Corporation.
 ---
 background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
 ---
+class: left, middle
 
 # TIRS-2
+
+.pull-left[
 - 30 m per pixel resolution
 - TIRS-2 uses thermal bands to detect subtle shifts in temperature—within a tenth of a degree Celsius.
 - Detects thermal radiation in two thermal wavelengths and corrects atmospheric effects.
 - TIRS-2 has a 15-degree field-of-view, matching the 185 km across-track swath of OLI-2.
+- much improved lifespan compared to its predecessor &lt;a name=cite-lulla2021mission&gt;&lt;/a&gt;([Lulla, Nellis, Rundquist, Srivastava, and Szabo, 2021](#bib-lulla2021mission)) 
 ]
----
-# Bands
-Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands. Two new bands were added to Landsat 9 to measure high, thin clouds and water quality.
-![](res/all_Landsat_bands.png)
-Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
+
+.pull-right[
+![](res/tirs2.jpeg)
+.image-caption[
+.center[TIRS-2 focal plane]
+]
+]
 
 ---
+class: left, middle
 # References
+
+.bibliography[
+&lt;a name=bib-lulla2021mission&gt;&lt;/a&gt;[Lulla, K., M. D. Nellis, B.
+Rundquist, et al.](#cite-lulla2021mission) (2021). _Mission to earth:
+LANDSAT 9 will continue to view the world_.
+
+&lt;a name=bib-landsat9&gt;&lt;/a&gt;[NASA Landsat Program](#cite-landsat9) (2024).
+_LANDSAT 9_. Accessed 12th February 2024.
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

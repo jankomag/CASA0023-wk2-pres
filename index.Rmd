@@ -16,20 +16,53 @@ output:
 bibliography: "references.bib"
 
 ---
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+
+library(RefManageR)
+BibOptions(check.entries = FALSE,
+           bib.style = "authoryear",
+           cite.style = "authoryear",
+           style = "markdown",
+           hyperlink = TRUE,
+           dashed = FALSE,
+           no.print.fields=c("doi", "url", "urldate", "issn"))
+myBib <- ReadBib("./references.bib", check = FALSE)
+
+library(knitcitations)
+```
+
 # Landsat 9
+
 ## The newest Landsat satellite
+
 - Launched September 27th, 2021 by NASA
 - The collected data is publicly available through USGS
 - Replaces Landsat 7 (launched in 1999), taking its place in orbit
-- Together with Landsat 8 the revisit time for data collection is 8 days
 - Landsat 9 addresses the stray light issue seen in Landsat 8's TIRS.
+- Together with Landsat 8 the revisit time for data collection is 8 days
 
+```{r, echo = FALSE, out.width='70%', fig.align='center'}
+  knitr::include_graphics('res/LANDSAT9.jpeg')
+```
+
+.link-style1[[NASA/Goddard Space Flight Center/Conceptual Image Lab](https://svs.gsfc.nasa.gov/vis/a010000/a013200/a013259/Landsat9_still_SW2.jpg)]
 
 ---
 # The history of Landsat Satellites
 
-![](res/Landsat_timeline_20200318_title.gif)
-Figure adapted from [@landsat9].
+```{r, echo = FALSE, out.width='98%', fig.align='center'}
+  knitr::include_graphics('res/Landsat_timeline_20200318_title.gif')
+```
+
+
+`r Citet(myBib, "landsat9")` 
+---
+# Bands
+Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands. Two new bands were added to Landsat 9 to measure high, thin clouds and water quality.
+![](res/all_Landsat_bands.png)
+Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
+
 
 ---
 # Technical Details
@@ -47,8 +80,9 @@ A diagram of TIRS-2 showing its main components. Image credit: NASA
 ]
 
 ---
+class: left, middle
 # OLI-2
-Built by Ball Aerospace & Technologies Corporation.
+### Built by Ball Aerospace & Technologies Corporation
 
 - 30 m per pixel resolution
 - Improvements to the sensor mean that dark regions like forests and coastal areas can be better captured.
@@ -59,18 +93,31 @@ Built by Ball Aerospace & Technologies Corporation.
 - Cirrus Band (Band 9): Detects high, thin cirrus clouds.
 - Two Thermal Infrared Bands (Bands 10 & 11): Image data for two distinct thermal infrared spectral regions.
 ---
+class: left, middle
 
 # TIRS-2
+
+.pull-left[
 - 30 m per pixel resolution
 - TIRS-2 uses thermal bands to detect subtle shifts in temperature—within a tenth of a degree Celsius.
 - Detects thermal radiation in two thermal wavelengths and corrects atmospheric effects.
 - TIRS-2 has a 15-degree field-of-view, matching the 185 km across-track swath of OLI-2.
+- much improved lifespan compared to its predecessor `r Citep(myBib, "lulla2021mission")` 
 ]
----
-# Bands
-Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands. Two new bands were added to Landsat 9 to measure high, thin clouds and water quality.
-![](res/all_Landsat_bands.png)
-Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
+
+.pull-right[
+![](res/tirs2.jpeg)
+.image-caption[
+.center[TIRS-2 focal plane]
+]
+]
 
 ---
+class: left, middle
 # References
+
+.bibliography[
+```{r, results='asis', echo=FALSE}
+PrintBibliography(myBib)
+```
+]
