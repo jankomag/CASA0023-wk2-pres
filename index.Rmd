@@ -41,6 +41,7 @@ library(knitcitations)
 - Replaces Landsat 7 (launched in 1999), taking its place in orbit
 - Landsat 9 addresses the stray light issue seen in Landsat 8's TIRS.
 - Together with Landsat 8 the revisit time for data collection is 8 days
+- Captures imagery in 30 m spatial resolution
 
 ```{r, echo = FALSE, out.width='70%', fig.align='center'}
   knitr::include_graphics('res/LANDSAT9.jpeg')
@@ -55,18 +56,25 @@ library(knitcitations)
   knitr::include_graphics('res/Landsat_timeline_20200318_title.gif')
 ```
 
-
 `r Citet(myBib, "landsat9")` 
+
 ---
 # Bands
-Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands. Two new bands were added to Landsat 9 to measure high, thin clouds and water quality.
-![](res/all_Landsat_bands.png)
-Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
+Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, one near-infrared spectral band, three shortwave-infrared spectral bands, one panchromatic band, and two thermal bands.
 
+**New bands added to Landsat 9:**
+- Coastal/Aerosol Band: Measures chlorophyll concentrations in coastal regions and aerosol detection
+- Cirrus Band: Detects high, thin cirrus clouds.
+- Two Thermal Infrared Bands
+
+```{r, echo = FALSE, out.width='70%', fig.align='center'}
+  knitr::include_graphics('res/all_Landsat_bands.png')
+```
+Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
 
 ---
 # Technical Details
- Landsat 9 carries two sensors: Operational Land Imager 2 (OLI-2) and the Thermal Infrared Sensor 2 (TIRS-2), which detect 11 wavelengths of visible, near infrared, shortwave infrared, and thermal infrared light. Both, with a five-year design life.
+Landsat 9 carries two sensors: Operational Land Imager 2 (OLI-2) and the Thermal Infrared Sensor 2 (TIRS-2), which detect 11 wavelengths of visible, near infrared, shortwave infrared, and thermal infrared light. Both, with a five-year design life.
 
 .pull-left[
 ###OLI-2
@@ -81,27 +89,14 @@ A diagram of TIRS-2 showing its main components. Image credit: NASA
 
 ---
 class: left, middle
-# OLI-2
-### Built by Ball Aerospace & Technologies Corporation
-
-- 30 m per pixel resolution
-- Improvements to the sensor mean that dark regions like forests and coastal areas can be better captured.
-- OLI-2 has a 15-degree field-of-view covering a 185 km (115 mi) across-track ground swath.
-
-### New bands added to Landsat 9:
-- Coastal/Aerosol Band (Band 1): Measures chlorophyll concentrations in coastal regions and aids in aerosol detection.
-- Cirrus Band (Band 9): Detects high, thin cirrus clouds.
-- Two Thermal Infrared Bands (Bands 10 & 11): Image data for two distinct thermal infrared spectral regions.
----
-class: left, middle
-
-# TIRS-2
+# Benefits of new sensors
+The new types of sensors enable the satellite to
 
 .pull-left[
-- 30 m per pixel resolution
+- new sensors ensure dark regions like forests and coastal areas are better captured
 - TIRS-2 uses thermal bands to detect subtle shifts in temperature—within a tenth of a degree Celsius.
 - Detects thermal radiation in two thermal wavelengths and corrects atmospheric effects.
-- TIRS-2 has a 15-degree field-of-view, matching the 185 km across-track swath of OLI-2.
+- Both TIRS-2 and OLI-2 have a 15-degree field-of-view covering a 185 km across-track swath
 - much improved lifespan compared to its predecessor `r Citep(myBib, "lulla2021mission")` 
 ]
 
@@ -111,6 +106,15 @@ class: left, middle
 .center[TIRS-2 focal plane]
 ]
 ]
+---
+# Applications
+
+The study by `r Citet(myBib, "jombo2023evaluating")` compared the data from Landsat 9 and 8, and Sentinel-2 imagery for urban land-use classification. They found that a model trained and evaluated with Landsat 9 data produced significantly better results than the other 2 sensors.
+
+---
+# Reflections
+
+The sensor 
 
 ---
 class: left, middle
