@@ -111,10 +111,30 @@ The new types of sensors enable the satellite to
 
 The study by `r Citet(myBib, "jombo2023evaluating")` compared the data from Landsat 9 and 8, and Sentinel-2 imagery for urban land-use classification. They found that a model trained and evaluated with Landsat 9 data produced significantly better results than the other 2 sensors.
 
+Another recent study used the data products of both Landsat 9 and 8 for monitoring water turbidity of wetlands in India `r Citep(myBib, "singh2024monitoring")`. The authors use the thermal infrared bands for estimating water surface temperature, enabling the monitoring of water quality pre- and post-monsoon event.
+
+.pull-left[
+By acquiring the TIR data at 100m resolution, `r Citet(myBib, "ye2023land")` develop an ensemble machine learning model for predicting land surface temperature (LST) from top of atmosphere bright temperature data. The developed algorithm is best able to predict LST in polar regions, due to changes in column water vapor.
+]
+
+.pull-right[
+```{r, echo = FALSE, out.width='80%', fig.align='center'}
+  knitr::include_graphics('res/ye2023land.jpg')
+```
+*Land surface temperature prediction from Landsat 9 TIR sensor data* `r Citep(myBib, "ye2023land")`
+]
+
 ---
 # Reflections
 
-The sensor 
+I believe the Landsat 9 satellite and the two sensors attached to it will be immensely useful for advancing global research. This satellite gave rise to a new generation of sensors of data for public good, since the captured data are made publicly available by USGS. I remain excited to learn about the this and all future satellites, and I hope the technological progress will enable new types of sensors with higher accuracy to become available to the public.
+
+
+```{r, echo = FALSE, out.width='70%', fig.align='center'}
+  knitr::include_graphics('res/L9SanFrancisco.jpg')
+```
+Image of San Francisco from Landsat's 9 OLI-2 sensor
+.link-style1[[Source: NASA](https://landsat.gsfc.nasa.gov/article/nasa-usgs-landsat-9-passes-review-now-operational/)]
 
 ---
 class: left, middle

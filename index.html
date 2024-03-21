@@ -69,6 +69,8 @@ Landsat 9, like Landsat 8, simultaneously images four visible spectral bands, on
 Image showing electromagnetic wavelengths captured by Landsat satellites. Source: NASA
 
 ---
+background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
+---
 # Technical Details
 Landsat 9 carries two sensors: Operational Land Imager 2 (OLI-2) and the Thermal Infrared Sensor 2 (TIRS-2), which detect 11 wavelengths of visible, near infrared, shortwave infrared, and thermal infrared light. Both, with a five-year design life.
 
@@ -103,16 +105,30 @@ The new types of sensors enable the satellite to
 ]
 ]
 ---
-background-image: url(https://github.com/yihui/xaringan/releases/download/v0.0.2/karl-moustache.jpg)
----
 # Applications
 
 The study by &lt;a name=cite-jombo2023evaluating&gt;&lt;/a&gt;[Jombo and Adelabu (2023)](#bib-jombo2023evaluating) compared the data from Landsat 9 and 8, and Sentinel-2 imagery for urban land-use classification. They found that a model trained and evaluated with Landsat 9 data produced significantly better results than the other 2 sensors.
 
+Another recent study used the data products of both Landsat 9 and 8 for monitoring water turbidity of wetlands in India &lt;a name=cite-singh2024monitoring&gt;&lt;/a&gt;([Singh, Saritha, and Pande, 2024](#bib-singh2024monitoring)). The authors use the thermal infrared bands for estimating water surface temperature, enabling the monitoring of water quality pre- and post-monsoon event.
+
+.pull-left[
+By acquiring the TIR data at 100m resolution, &lt;a name=cite-ye2023land&gt;&lt;/a&gt;[Ye, Liu, Hui, and Zhu (2023)](#bib-ye2023land) develop an ensemble machine learning model for predicting land surface temperature (LST) from top of atmosphere bright temperature data. The developed algorithm is best able to predict LST in polar regions, due to changes in column water vapor.
+]
+
+.pull-right[
+&lt;img src="res/ye2023land.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+*Land surface temperature prediction from Landsat 9 TIR sensor data* ([Ye, Liu, Hui et al., 2023](#bib-ye2023land))
+]
+
 ---
 # Reflections
 
-The sensor 
+I believe the Landsat 9 satellite and the two sensors attached to it will be immensely useful for advancing global research. This satellite gave rise to a new generation of sensors of data for public good, since the captured data are made publicly available by USGS. I remain excited to learn about the this and all future satellites, and I hope the technological progress will enable new types of sensors with higher accuracy to become available to the public.
+
+
+&lt;img src="res/L9SanFrancisco.jpg" width="80%" style="display: block; margin: auto;" /&gt;
+Image of San Francisco from Landsat's 9 OLI-2 sensor
+.link-style1[[Source: NASA](https://landsat.gsfc.nasa.gov/article/nasa-usgs-landsat-9-passes-review-now-operational/)]
 
 ---
 class: left, middle
@@ -131,6 +147,18 @@ LANDSAT 9 will continue to view the world_.
 
 &lt;a name=bib-landsat9&gt;&lt;/a&gt;[NASA Landsat Program](#cite-landsat9) (2024).
 _LANDSAT 9_. Accessed 12th February 2024.
+
+&lt;a name=bib-singh2024monitoring&gt;&lt;/a&gt;[Singh, R., V. Saritha, and C. B.
+Pande](#cite-singh2024monitoring) (2024). "Monitoring of wetland
+turbidity using multi-temporal Landsat-8 and Landsat-9 satellite
+imagery in the Bisalpur wetland, Rajasthan, India". In: _Environmental
+Research_ 241, p. 117638.
+
+&lt;a name=bib-ye2023land&gt;&lt;/a&gt;[Ye, X., R. Liu, J. Hui, et
+al.](#cite-ye2023land) (2023). "Land Surface Temperature estimation
+from Landsat-9 thermal infrared data using ensemble learning method
+considering the physical radiance transfer process". In: _Land_ 12.7,
+p. 1287.
 ]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
